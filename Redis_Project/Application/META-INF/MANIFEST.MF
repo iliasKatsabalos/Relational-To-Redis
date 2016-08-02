@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-Description: Jedis is a blazingly small and sane Redis java cli
+ ent.
+Bundle-License: http://github.com/xetorthio/jedis/raw/master/LICENSE.t
+ xt
+Bundle-SymbolicName: redis.clients.jedis
+Archiver-Version: Plexus Archiver
+Built-By: jonas
+Bnd-LastModified: 1457988176409
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.commons.pool2;version="[2.4,3)",org.apache.
+ commons.pool2.impl;version="[2.4,3)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Tool: Bnd-2.3.0.201405100607
+Export-Package: redis.clients.util;uses:="org.apache.commons.pool2,org
+ .apache.commons.pool2.impl,redis.clients.jedis.exceptions";version="2
+ .8.1",redis.clients.jedis;uses:="org.apache.commons.pool2.impl,redis.
+ clients.jedis.commands,redis.clients.jedis.exceptions,redis.clients.j
+ edis.params.geo,redis.clients.jedis.params.sortedset,redis.clients.ut
+ il";version="2.8.1",redis.clients.jedis.params;version="2.8.1",redis.
+ clients.jedis.params.sortedset;uses:="redis.clients.jedis.params";ver
+ sion="2.8.1",redis.clients.jedis.params.geo;uses:="redis.clients.jedi
+ s.params";version="2.8.1",redis.clients.jedis.commands;uses:="redis.c
+ lients.jedis,redis.clients.jedis.params.geo,redis.clients.jedis.param
+ s.sortedset";version="2.8.1",redis.clients.jedis.exceptions;uses:="re
+ dis.clients.jedis";version="2.8.1"
+Bundle-Name: Jedis
+Bundle-Version: 2.8.1
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_65
+
