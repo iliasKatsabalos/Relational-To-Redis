@@ -113,7 +113,7 @@ This string is printed as code in the Executable class.
 				writer.newLine();
 			   
 				}
-```
+```  
 The code in this picture, in the **CodeGen class** produces the following code in the **Executable class**
 ```java
 Jedis jedis = new Jedis("localhost");
@@ -129,12 +129,12 @@ String CountryK= k1.next();
 Iterator<String> k2 = GradeSet.iterator();
 while (k2.hasNext()){
 String GradeK= k2.next();
-```
+```  
   * condition[]: contains the where clause of the sql query, splitted according to the regex "(?=AND|OR)". The whole array is passed to the Parser method, that returns a String. In this example it returns :
  
 ```java
 if(JedBool(jedis.hget(StudentK,"SSN"),"=",jedis.hget(GradeK,"SSN"))& JedBool(jedis.hget(StudentK,"ID_Country"),"=",jedis.hget(CountryK,"IDC"))& (JedBool(jedis.hget(CountryK,"CountryName"),"=","Greece")& (JedBool(jedis.hget(GradeK,"Mark"),">","7")| JedBool(jedis.hget(StudentK,"FName"),">","Mb")))){
 System.out.println(jedis.hget(StudentK,"FName") + "," + jedis.hget(StudentK,"LName") + "," + jedis.hget(GradeK,"Mark") + "," + jedis.hget(CountryK,"CountryName"));}
-```
+```  
 The **JedBool** method has as input three parameters (String val1, String oper, String val2) and returns a Boolean. This method exists in the Executable class. The reason we created the JedBool method was the comparison between two strings. The compareTo method returns an integer, and we needed to add an extra mechanism in order to transpose this integer into a Boolean value.
 First we check whether the values inserted are numeric or Strings. Then we make the appropriate transformations, either for double, integer or we leave them as strings. Then according to the oper parameter, we compare the values and return the Boolean. Finally, if the statement is true, the values are printed in the console.
